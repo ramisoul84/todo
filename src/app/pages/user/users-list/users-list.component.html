@@ -1,0 +1,17 @@
+<p>users list</p>
+<button (click)="addUser()">Add new user</button>
+<table>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Email</th>
+  <th>Actions</th>
+  <tr *ngFor="let user of users">
+    <td>{{ user.firstName }}</td>
+    <td>{{ user.lastName }}</td>
+    <td>{{ user.email }}</td>
+    <td>
+      <button>Edit</button>
+      <button>Delete</button>
+    </td>
+  </tr>
+</table>

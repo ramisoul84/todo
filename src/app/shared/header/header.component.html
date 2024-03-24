@@ -1,0 +1,15 @@
+<header>
+  <div class="logo-wrapper" routerLink="">
+    <span class="material-symbols-outlined logo"> task_alt </span>
+    <strong class="title">Do.IT</strong>
+  </div>
+  <div class="login-wrapper" (click)="user ? logout() : login()">
+    <span class="material-symbols-outlined login">
+      {{ user ? "account_circle" : "person" }}
+    </span>
+    <p class="login-text">
+      {{ user ? user : "login" }}
+      <span class="tooltip" *ngIf="user">logout</span>
+    </p>
+  </div>
+</header>
